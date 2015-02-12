@@ -1,3 +1,10 @@
 Google form grid responses
 
 A set of google sheet functions to transform form grid responses.
+
+TODO:
+* write tests.
+* refactor: extract common code.
+* better documentation with examples.
+* better error handling for invalid parameters.
+* publish as google sheet addon or something like that.
