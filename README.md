@@ -1,4 +1,5 @@
 Google form grid responses
+==========================
 
 A set of google sheet functions to transform form grid responses.
 
@@ -6,6 +7,8 @@ demo link:
 https://docs.google.com/spreadsheets/d/13lngsjpVkwVHUIIIHQClqiELd0zjrCYfXIgtQE1WMEE/edit#gid=1334905196
 
 How to use:
+-----------
+
 * create a google form with a grid type question in it.
 * collect responses in a sheet.
 * open sheet.
@@ -15,6 +18,8 @@ How to use:
 * use new sheet functions.
 
 TODO:
+-----
+
 * write tests.
 * refactor: extract common code.
 * better documentation with examples.
