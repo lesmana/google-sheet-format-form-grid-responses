@@ -1,5 +1,5 @@
-Google form grid responses
-==========================
+Google sheet format form grid responses
+=======================================
 
 A set of google sheet functions to transform form grid responses.
 
