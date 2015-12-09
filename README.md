@@ -3,9 +3,6 @@ Google sheet format form grid responses
 
 A set of google sheet functions to transform form grid responses.
 
-demo link:
-https://docs.google.com/spreadsheets/d/13lngsjpVkwVHUIIIHQClqiELd0zjrCYfXIgtQE1WMEE/edit#gid=1334905196
-
 How to use:
 -----------
 
