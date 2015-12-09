@@ -25,3 +25,12 @@ TODO:
 * better documentation with examples.
 * better error handling for invalid parameters.
 * publish as google sheet addon or something like that.
+
+License
+-------
+
+Copyright (C) 2015 Lesmana Zimmer
+
+This work is free. You can redistribute it and/or modify it under the
+terms of the Do What The Fuck You Want To Public License, Version 2,
+as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
