@@ -26,7 +26,7 @@ this is how it will look in spreadsheet:
 
 count answers based on rows:
 
-    =GRIDCOUNTROWS(raw!C2:F, raw!C1:F1, raw!B2:B, "Name")
+    =GRIDCOUNTROWS(gridcells, titlerow, namecolumn, upperleftlabel)
 
 | Name | Yes | Maybe | No |
 | --- | --- | --- | --- |
@@ -38,7 +38,7 @@ count answers based on rows:
 
 count answers based on columns:
 
-    =GRIDCOUNTCOLUMNS(raw!C2:F, cleangridtitles!C1:F1, raw!B2:B, "Affinity")
+    =GRIDCOUNTCOLUMNS(gridcells, titlerow, namecolumn, upperleftlabel)
 
 | Affinity | Spring | Summer | Fall | Winter |
 | --- | --- | --- | --- | --- |
@@ -48,7 +48,7 @@ count answers based on columns:
 
 summarize answers based on rows:
 
-    =GRIDSUMROWS(raw!C2:F, cleangridtitles!C1:F1, raw!B2:B, "Name")
+    =GRIDSUMROWS(gridcells, titlerow, namecolumn, upperleftlabel)
 
 | Name | Yes | Maybe | No |
 | --- | --- | --- | --- |
@@ -60,7 +60,7 @@ summarize answers based on rows:
 
 summarize answers based on columns:
 
-    =GRIDSUMCOLUMNS(raw!C2:F, cleangridtitles!C1:F1, raw!B2:B, "Affinity")
+    =GRIDSUMCOLUMNS(gridcells, titlerow, namecolumn, upperleftlabel)
 
 | Affinity | Spring | Summer | Fall | Winter |
 | --- | --- | --- | --- | --- |
@@ -68,3 +68,29 @@ summarize answers based on columns:
 | Maybe | Bort<br>Carla | Adam<br>Carla<br>Eve | Bort<br>Dolan | Bort |
 | No | | Bort | Eve | Carla<br>Dolan<br>Eve |
 
+about the parameters:
+---------------------
+
+    =GRIDXY(grid cells, title row, name column, upper left label)
+
+* grid cells:
+  the block of cells containing the grid question responses
+* title row:
+  the row containing the titles of the grid
+* name column:
+  the column containing the names of the respondents
+* upper left label:
+  a string to put in the upper left cell
+
+example
+
+    =GRIDSUMCOLUMNS(Form responses 1!C2:F,
+                    Clean grid titles!C1:F1,
+                    Form responses 1!B2:B,
+                    "Affinity")
+
+"Clean grid titles" is another sheet containing cleaned titles.
+
+The titles are "cleaned" using this formula:
+
+    =ARRAYFORMULA(REGEXEXTRACT(Form responses 1!C1:F1, "\[(.*)\]"))
